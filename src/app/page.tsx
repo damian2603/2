@@ -98,8 +98,7 @@ export default function HomePage() {
               Profesjonalne usługi remontowe z gwarancją jakości. Od projektu po klucz - zrealizujemy Twoje marzenia o idealnym wnętrzu.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90">
-                <Phone className="mr-2 h-5 w-5" />
+              <Button size="lg" className="bg-white text-black hover:bg-zinc-100">
                 <p><span style={{fontSize: "14px"}}>Zobacz realizacje</span></p>
               </Button>
             </div>
