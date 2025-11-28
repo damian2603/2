@@ -25,6 +25,7 @@ export default function HomePage() {
             alt="REM-TOP Logo"
             className="h-auto w-full flex-grow-0 mr-auto self-stretch"
           />
+          {/* Desktop Menu */}
           <div className="hidden md:flex gap-[40px] justify-center items-center my-auto">
             <Link href="#home" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors text-center mb-auto whitespace-nowrap">
               <p>Strona główna</p>
@@ -39,7 +40,50 @@ export default function HomePage() {
               Kontakt
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden flex h-10 w-10 items-center justify-center rounded-lg border border-muted-foreground text-muted-foreground hover:bg-accent hover:text-white hover:border-accent transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-muted-foreground/20 bg-white px-4 py-4 flex flex-col gap-3">
+            <Link
+              href="#home"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Strona główna
+            </Link>
+            <Link
+              href="#uslugi"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Usługi
+            </Link>
+            <Link
+              href="#galeria"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Galeria
+            </Link>
+            <Link
+              href="#kontakt"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Kontakt
+            </Link>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
