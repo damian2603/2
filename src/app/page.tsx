@@ -10,13 +10,13 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 flex flex-col">
-        <div className="flex h-22 items-center justify-between px-4">
+        <div className="flex h-24 justify-center flex-row -mb-[3px] flex-grow-0 px-4">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F9649f019a6db4c7da0368b6fb83919c8%2Fc5490c0f835a4aafae6bb39c038f395d?format=webp&width=800"
             alt="REM-TOP Logo"
-            className="h-[182px] w-auto self-stretch -mt-[3px] ml-auto pl-[113px] pb-16"
+            className="h-[182px] w-auto self-stretch -mt-[35px] ml-auto pl-[113px]"
           />
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-[57px] justify-start items-center mr-auto">
             <Link href="#home" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
               Strona główna
             </Link>
