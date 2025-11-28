@@ -14,7 +14,7 @@ export default function HomePage() {
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F9649f019a6db4c7da0368b6fb83919c8%2Fc5490c0f835a4aafae6bb39c038f395d?format=webp&width=800"
             alt="REM-TOP Logo"
-            className="h-[182px] w-auto self-stretch -mt-[35px] ml-auto pl-[113px]"
+            className="h-[182px] w-auto self-stretch -mt-[35px] mx-auto pl-[113px]"
           />
           <div className="hidden md:flex gap-[57px] justify-start items-center mr-auto">
             <Link href="#home" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
@@ -30,9 +30,6 @@ export default function HomePage() {
               Kontakt
             </Link>
           </div>
-          <Button className="bg-accent hover:bg-accent/90">
-            Darmowa wycena
-          </Button>
         </div>
       </nav>
 
