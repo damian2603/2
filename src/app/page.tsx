@@ -1,11 +1,15 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Separator } from "@/components/ui/separator"
-import { Hammer, Paintbrush, Wrench, Home, Mail, Phone, MapPin, Check } from "lucide-react"
+import { Hammer, Paintbrush, Wrench, Home, Mail, Phone, MapPin, Check, Menu, X } from "lucide-react"
 
 export default function HomePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
