@@ -11,12 +11,11 @@ export default function HomePage() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <div className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-black">
-              <Hammer className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-xl font-bold text-black">RemontPro</span>
-          </div>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F9649f019a6db4c7da0368b6fb83919c8%2Fc5490c0f835a4aafae6bb39c038f395d?format=webp&width=800"
+            alt="REM-TOP Logo"
+            className="h-16 w-auto"
+          />
           <div className="hidden md:flex gap-6">
             <Link href="#home" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
               Strona główna
