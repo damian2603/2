@@ -14,7 +14,7 @@ export default function HomePage() {
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F9649f019a6db4c7da0368b6fb83919c8%2Faa944d85623043089dc52baed33ab579"
             alt="REM-TOP Logo"
-            className="h-auto w-full flex-grow-0 mr-auto"
+            className="h-auto w-full flex-grow-0 mr-auto self-stretch"
           />
           <div className="hidden md:flex gap-[40px] justify-center items-center my-auto">
             <Link href="#home" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors text-center mb-auto whitespace-nowrap">
