@@ -98,9 +98,13 @@ export default function HomePage() {
               Profesjonalne usługi remontowe z gwarancją jakości. Od projektu po klucz - zrealizujemy Twoje marzenia o idealnym wnętrzu.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-white text-black hover:bg-zinc-100">
+                            <a
+                href="https://www.instagram.com/remtopszlejter/"
+                target="_blank"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-white text-black px-8 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 cursor-pointer"
+              >
                 <p><span style={{fontSize: "14px"}}>Zobacz realizacje</span></p>
-              </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -352,4 +356,5 @@ export default function HomePage() {
       </footer>
     </div>
   )
+
 }
