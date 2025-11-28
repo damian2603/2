@@ -34,7 +34,50 @@ export default function HomePage() {
               Kontakt
             </Link>
           </div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden flex items-center justify-center"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6 text-muted-foreground" />
+            ) : (
+              <Menu className="h-6 w-6 text-muted-foreground" />
+            )}
+          </button>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden flex flex-col gap-2 border-t px-4 py-4">
+            <Link
+              href="#home"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Strona główna
+            </Link>
+            <Link
+              href="#uslugi"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Usługi
+            </Link>
+            <Link
+              href="#galeria"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Galeria
+            </Link>
+            <Link
+              href="#kontakt"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Kontakt
+            </Link>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
