@@ -1,24 +1,34 @@
+"use client"
+
 import Link from "next/link"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Separator } from "@/components/ui/separator"
-import { Hammer, Paintbrush, Wrench, Home, Mail, Phone, MapPin, Check } from "lucide-react"
+import { Hammer, Paintbrush, Wrench, Home, Mail, Phone, MapPin, Check, Menu, X } from "lucide-react"
 
 export default function HomePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 flex flex-col">
-        <div className="flex h-24 justify-center flex-row -mb-[3px] flex-grow-0 px-4">
+        <div className="flex h-24 justify-center items-center self-center w-auto flex-row flex-grow-0 px-4">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F9649f019a6db4c7da0368b6fb83919c8%2Fc5490c0f835a4aafae6bb39c038f395d?format=webp&width=800"
+            src="https://cdn.builder.io/api/v1/image/assets%2F9649f019a6db4c7da0368b6fb83919c8%2Faa944d85623043089dc52baed33ab579"
             alt="REM-TOP Logo"
-            className="h-[182px] w-auto self-stretch -mt-[35px] mr-auto ml-0"
+            className="h-auto w-full flex-grow-0 mr-auto self-stretch"
           />
-          <div className="hidden md:flex gap-[57px] justify-start items-center mr-auto">
-            <Link href="#home" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
-              Strona główna
+          {/* Desktop Menu */}
+          <div className="hidden md:flex gap-[40px] justify-center items-center my-auto">
+            <Link href="#home" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors text-center mb-auto whitespace-nowrap">
+              <p>Strona główna</p>
             </Link>
             <Link href="#uslugi" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors">
               Usługi
@@ -30,7 +40,50 @@ export default function HomePage() {
               Kontakt
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden flex h-10 w-10 items-center justify-center rounded-lg border border-muted-foreground text-muted-foreground hover:bg-accent hover:text-white hover:border-accent transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-muted-foreground/20 bg-white px-4 py-4 flex flex-col gap-3">
+            <Link
+              href="#home"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Strona główna
+            </Link>
+            <Link
+              href="#uslugi"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Usługi
+            </Link>
+            <Link
+              href="#galeria"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Galeria
+            </Link>
+            <Link
+              href="#kontakt"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors py-2"
+            >
+              Kontakt
+            </Link>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -45,8 +98,7 @@ export default function HomePage() {
               Profesjonalne usługi remontowe z gwarancją jakości. Od projektu po klucz - zrealizujemy Twoje marzenia o idealnym wnętrzu.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90">
-                <Phone className="mr-2 h-5 w-5" />
+              <Button size="lg" className="bg-white text-black hover:bg-zinc-100">
                 <p><span style={{fontSize: "14px"}}>Zobacz realizacje</span></p>
               </Button>
             </div>
