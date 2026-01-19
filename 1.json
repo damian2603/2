@@ -1,0 +1,10 @@
+{
+    "first_param": "53603",
+    "last_param": "696e086d",
+    "static_param": "YhS8lMKJZ0s88mZOkqdr7Dyznd6koL8N",
+    "checksum_indexes": [0,1,4,4,4,5,5,6,7,8,8,11,12,13,13,14,15,15,15,17,17,18,18,21,24,25,28,29,31,32,35,35],
+    "checksum_constants": [104,-98,89,-61,125,55,94,127,-112,134,-87,70,83,134,-98,-91,-125,77,135,-108,-88,-129,58,-139,129,86,98,-92,131,-99,130,-126],
+    "checksum_constant": 397,
+    "x-of-rev": "202601191032-71fb1be36d",
+    "telegram-channel": "@OpenBullet_CFGs"
+}
